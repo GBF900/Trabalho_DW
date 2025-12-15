@@ -1,0 +1,51 @@
+*{
+    margin:0;
+    box-sizing: border-box;
+}
+
+
+body{
+    background-color: rgb(197, 196, 185);
+    transition: opacity 0.4s ease;
+}
+
+body.fade-out {
+  opacity: 0;
+}
+
+
+.navbar{
+    background-color: rgb(155, 152, 152);
+    border-bottom: 6px solid rgb(0, 0, 0);
+    
+}
+
+.navbar-text{
+    display:flex;
+    flex-wrap: nowrap;
+    max-width: 50%;
+    margin-right: 2%;
+}
+
+i[id='agend']{
+    color:white;
+    font-weight: 600;
+    font-size: 30px;
+    max-width: 50%;
+    margin-left:5%;
+}
+
+
+i{  color:white;
+    font-weight: 600;
+}
+
+a:hover{
+    border:2px solid white;
+    transition:1.4s;
+    background-color: black;
+}
+
+.accordion-collapse {
+  transition: height .35s ease;
+}

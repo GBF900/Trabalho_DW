@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="tarefas.css" >
+ 
+ </head>
+  <body>
+
+<nav class="navbar navbar-expand-lg " >
+  <div class="container-fluid">
+    <i class="bi bi-calendar-check-fill" id="agend">   AGENDA'R </i>
+    
+    <div class="navbar-text">
+      <ul class="d-flex gap-5 list-unstyled mb-0">
+     
+        <a href="/taref.html"  class="btn btn-outline-dark d-inline-flex gap-2 text-nowrap">
+        <li class="nav-item">
+         <i class="bi bi-house-door-fill">  Home</i>
+        </li>
+      </a>
+    
+      <a href="/Listagem.html"  class="btn btn-outline-dark d-inline-flex gap-2 text-nowrap">
+      <li class="nav-item">
+        <i class="bi bi-card-checklist">  Listagem</i>   
+      </li>
+    </a>
+    
+      <a href="/NR.html"  class="btn btn-outline-dark d-inline-flex gap-2 text-nowrap">
+        <li class="nav-item">
+        <i class="bi bi-clipboard2-plus">  Novo Registro</i>
+        </li>
+        </a>
+       
+        <a href="/taref.html"  class="btn btn-outline-dark d-inline-flex gap-2 text-nowrap">
+        <li class="nav-item">
+         <i class="bi bi-archive">  Edição</i>
+        </li>
+      </a>
+
+      </ul>
+    </div>
+</div>
+</nav>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<div class="card" style="width: 60%;margin-left:20%;margin-top:2%">
+  <div class="card-header" style="background-color:rgb(120, 136, 136);text-align:center;font-weight:800;font-size:40px" >
+   QUEM SOMOS? 
+  </div>
+  <div class="card-body">
+    <p class="card-text" style="text-indent: 10px;"> <strong> Um sistema de registro de tarefas simples e otimizado, que busca fazer do seu dia mais organizado
+      , previsível e completo, estruturando suas tarefas, guardando seus dados e aperfeiçoando sua produtividade.
+    </strong></p>
+  </div>
+</div>
+
+
+<div class="card" style="width: 60%; margin-left:20%; margin-top:2%">
+  <div class="card-header" style="background-color:rgb(120, 136, 136); text-align:center;font-weight:800;font-size:40px;">
+    COMO FAZEMOS?
+  </div>
+
+  <div class="card-body">
+
+    <div class="accordion" id="accordionComoFazemos">
+
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#item1">
+            ➕ Personalização
+          </button>
+        </h2>
+        <div id="item1" class="accordion-collapse collapse" data-bs-parent="#accordionComoFazemos">
+          <div class="accordion-body">
+            Com a missão de deixar suas atividades personalizadas e ao seu alcance,
+            ajudamos a criá-las e torná-las muito mais alinhadas com você.
+          </div>
+        </div>
+      </div>
+
+ 
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button"  data-bs-toggle="collapse" data-bs-target="#item2">
+            📋 Organização
+          </button>
+        </h2>
+        <div id="item2" class="accordion-collapse collapse" data-bs-parent="#accordionComoFazemos">
+          <div class="accordion-body">
+            Listamos e ajudamos a criar um ambiente organizado, limpo e sem atrasos.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#item3">
+            <i class="bi bi-arrow-clockwise me-2"></i> Flexibilidade
+          </button>
+        </h2>
+        <div id="item3" class="accordion-collapse collapse"
+             data-bs-parent="#accordionComoFazemos">
+          <div class="accordion-body">
+            Errou, esqueceu de algo ou quer mudar por causa de algum imprevisto?
+            Sem problemas. Estamos prontos pro que der e vier com você.
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+<script>
+  document.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", e => {
+      if (!document.startViewTransition) return;
+
+      e.preventDefault();
+      document.startViewTransition(() => {
+        window.location = link.href;
+      });
+    });
+  });
+
+
+document.querySelectorAll('.accordion-collapse').forEach(acc => {
+  acc.addEventListener('shown.bs.collapse', function () {
+    this.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
+  });
+});
+
+</script>
+
+
+
+</body>
+</html>

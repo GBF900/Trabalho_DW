@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="tarefas.css" >
+ 
+ </head>
+  <body>
+
+
+<nav class="navbar navbar-expand-lg " >
+  <div class="container-fluid">
+    <i class="bi bi-calendar-check-fill" id="agend">   AGENDA'R </i>
+    
+    <div class="navbar-text">
+      <ul class="d-flex gap-5 list-unstyled mb-0">
+     
+        <a href="/taref.html"  class="btn  btn-outline-dark d-inline-flex gap-2 text-nowrap">
+        <li class="nav-item">
+         <i class="bi bi-house-door-fill">  Home</i>
+        </li>
+      </a>
+    
+      <a href="/Listagem.html"  class="btn  btn-outline-dark d-inline-flex gap-2 text-nowrap">
+      <li class="nav-item">
+        <i class="bi bi-card-checklist">  Listagem</i>   
+      </li>
+    </a>
+    
+      <a href="/NR.html"  class="btn  btn-outline-dark d-inline-flex gap-2 text-nowrap">
+        <li class="nav-item">
+        <i class="bi bi-clipboard2-plus">  Novo Registro</i>
+        </li>
+        </a>
+       
+        <a href="/Edição.html"  class="btn  btn-outline-dark d-inline-flex gap-2 text-nowrap">
+        <li class="nav-item">
+         <i class="bi bi-archive">  Edição</i>
+        </li>
+      </a>
+      
+      </ul>
+    </div>
+</div>
+</nav>
+
+<div class="container">
+
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <i class="bi bi-card-checklist" style="font-size:70px"> <h2>Listagem de Tarefas </h2></i>  
+    <a href="NR.html" class="btn " style="background-color:rgb(39, 189, 39);border:3px solid black; font-weight:800">
+      ➕ Novo Registro
+    </a>
+  </div>
+
+  <table class="table table-bordered table-hover">
+    <thead class="table-dark">
+      <tr>
+        <th>Nome</th>
+        <th>Data / Hora</th>
+        <th>Prioridade</th>
+        <th class="text-center">Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Estudar Matemática</td>
+        <td>12/12/2025 14:00</td>
+        <td>Alta</td>
+        <td class="text-center">
+          <a href="Edição.html" class="btn btn-sm btn-warning">
+            <i class="bi bi-pencil"></i>
+          </a>
+          <button class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#modalExcluir">
+            <i class="bi bi-trash"></i>
+          </button>
+        </td>
+      </tr>
+
+      <tr>
+        <td>Revisar Código</td>
+        <td>12/12/2025 16:30</td>
+        <td>Média</td>
+        <td class="text-center">
+          <a href="Edição.html" class="btn btn-sm btn-warning">
+            <i class="bi bi-pencil"></i>
+          </a>
+          <button class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#modalExcluir">
+            <i class="bi bi-trash"></i>
+          </button>
+        </td>
+      </tr>
+
+      <tr>
+        <td>Reunião</td>
+        <td>13/12/2025 09:00</td>
+        <td>Alta</td>
+        <td class="text-center">
+          <a href="Edição.html" class="btn btn-sm btn-warning">
+            <i class="bi bi-pencil"></i>
+          </a>
+          <button class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#modalExcluir">
+            <i class="bi bi-trash"></i>
+          </button>
+        </td>
+      </tr>
+
+      <tr>
+        <td>Organizar Arquivos</td>
+        <td>13/12/2025 11:00</td>
+        <td>Baixa</td>
+        <td class="text-center">
+          <a href="Edição.html" class="btn btn-sm btn-warning">
+            <i class="bi bi-pencil"></i>
+          </a>
+          <button class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#modalExcluir">
+            <i class="bi bi-trash"></i>
+          </button>
+        </td>
+      </tr>
+
+      <tr>
+        <td>Enviar Relatório</td>
+        <td>14/12/2025 10:00</td>
+        <td>Alta</td>
+        <td class="text-center">
+          <a href="Edição.html" class="btn btn-sm btn-warning">
+            <i class="bi bi-pencil"></i>
+          </a>
+          <button class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#modalExcluir">
+            <i class="bi bi-trash"></i>
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+<div class="modal fade" id="modalExcluir" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h5 class="modal-title">Confirmar Exclusão</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+        Deseja realmente excluir este registro?
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+        <button class="btn btn-danger" data-bs-dismiss="modal">Excluir</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  document.querySelectorAll("a[href]").forEach(link => {
+    link.addEventListener("click", function (e) {
+
+      const href = this.getAttribute("href");
+
+      if (
+        !href ||
+        href.startsWith("#") ||
+        this.target === "_blank" ||
+        this.hasAttribute("download")
+      ) return;
+
+      e.preventDefault();
+
+      document.body.classList.add("fade-out");
+
+      setTimeout(() => {
+        window.location.href = href;
+      }, 400);
+    });
+  });
+
+});
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
